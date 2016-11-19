@@ -29,7 +29,7 @@ export default class ITalk extends Component {
     return (
         <View style={styles.container}>
           <ToolbarAndroid style={styles.toolBar}
-                          title="企讯通"
+                          title="爱聊ITalk"
                           titleColor="#FFFFFF"
                           actions={[{title: '设置',  show: 'always'}]}
           />

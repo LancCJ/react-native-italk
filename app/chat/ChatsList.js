@@ -11,6 +11,8 @@ import {
 
 //第三方组件
 import { List, ListItem } from 'react-native-elements'
+//自定义组件
+import ChatingRoom from './ChatingRoom';
 
 //创建一个DataSource对象
 const ds = new ListView.DataSource({
@@ -94,6 +96,22 @@ export default class ChatsList extends Component {
             dataSource:ds.cloneWithRows(list)
         };
     }
+    /**
+     * 跳转页面至SecondPage
+     * @param name 传递参数
+     * @param type 动画类型
+     */
+    gotoNext(name, type = 'Normal') {
+        this.props.navigator.push({
+            component: ChatingRoom,
+            passProps: {
+                id: name
+            },
+            onPress: this.onPress,
+            rightText: 'ALERT!',
+            type: type
+        })
+    }
     renderRow (rowData, sectionID) {
         return (
             <ListItem
@@ -102,7 +120,7 @@ export default class ChatsList extends Component {
                 title={rowData.name}
                 subtitle={rowData.subtitle}
                 avatar={{uri:rowData.avatar_url}}
-                onPress={_onPress}
+                onPress={()=>this.gotoNext('第一页')}
             />
         )
     }

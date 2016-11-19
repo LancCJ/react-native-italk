@@ -34,12 +34,14 @@ export default class ITalk extends Component {
                           actions={[{title: '设置',  show: 'always'}]}
           />
           <View style={styles.tabNavigator}>
-            <TabNavigator>
+            <TabNavigator
+              tabBarStyle={{backgroundColor:"#FFFFFF",overflow: 'hidden' }}
+            >
               <TabNavigator.Item
                   selected={this.state.selectedTab === 'chats'}
                   title="会话"
                   renderIcon={() => <Icon name="ios-chatbubbles-outline" size={30} />}
-                  renderSelectedIcon={() => <Icon name="ios-chatbubbles"  size={30} color="#318CCC"/>}
+                  renderSelectedIcon={() => <Icon name="ios-chatbubbles"  size={30} color="#007AFF"/>}
                   onPress={() => this.setState({ selectedTab: 'chats' })}>
                 <ChatsPage/>
               </TabNavigator.Item>
@@ -47,7 +49,7 @@ export default class ITalk extends Component {
                   selected={this.state.selectedTab === 'friends'}
                   title="好友"
                   renderIcon={() => <Icon name="ios-people-outline" size={30} />}
-                  renderSelectedIcon={() => <Icon name="ios-people"  size={30} color="#318CCC"/>}
+                  renderSelectedIcon={() => <Icon name="ios-people"  size={30} color="#007AFF"/>}
                   onPress={() => this.setState({ selectedTab: 'friends' })}>
                 <FriendsPage/>
               </TabNavigator.Item>
@@ -55,7 +57,7 @@ export default class ITalk extends Component {
                   selected={this.state.selectedTab === 'apps'}
                   title="应用"
                   renderIcon={() => <Icon name="ios-aperture-outline" size={30} />}
-                  renderSelectedIcon={() => <Icon name="ios-aperture-outline" size={30} color="#318CCC"/>}
+                  renderSelectedIcon={() => <Icon name="ios-aperture" size={30} color="#007AFF"/>}
                   onPress={() => this.setState({ selectedTab: 'apps' })}>
                 <AppsPage/>
               </TabNavigator.Item>
@@ -63,7 +65,7 @@ export default class ITalk extends Component {
                   selected={this.state.selectedTab === 'setting'}
                   title="设置"
                   renderIcon={() => <Icon name="ios-settings-outline"  size={30} />}
-                  renderSelectedIcon={() => <Icon name="ios-settings"  size={30} color="#318CCC"/>}
+                  renderSelectedIcon={() => <Icon name="ios-settings"  size={30} color="#007AFF"/>}
                   onPress={() => this.setState({ selectedTab: 'setting' })}>
                 <SettingPage/>
               </TabNavigator.Item>
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
     },
     toolBar:{
         height:50,
-        backgroundColor:"#2384cc"
+        backgroundColor:"#007AFF"
     },
     tabNavigator:{
         flex:1

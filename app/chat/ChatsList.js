@@ -96,6 +96,10 @@ export default class ChatsList extends Component {
             dataSource:ds.cloneWithRows(list)
         };
     }
+    // 填出提示框
+    onPress() {
+        alert("我是Spike!");
+    }
     /**
      * 跳转页面至SecondPage
      * @param name 传递参数

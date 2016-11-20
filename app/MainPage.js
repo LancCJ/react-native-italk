@@ -27,11 +27,6 @@ export default class MainPage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {/*<ToolbarAndroid style={styles.toolBar}*/}
-                                {/*title="爱聊ITalk"*/}
-                                {/*titleColor="#FFFFFF"*/}
-                                {/*actions={[{title: '设置',  show: 'always'}]}*/}
-                {/*/>*/}
                 <View style={styles.tabNavigator}>
                     <TabNavigator
                         tabBarStyle={{backgroundColor:"#FFFFFF",overflow: 'hidden' }}
@@ -78,6 +73,7 @@ export default class MainPage extends Component {
 const styles = StyleSheet.create({
     container :{
         flex:1,
+        marginTop:65,
         backgroundColor:"#CCCCCC",
     },
     toolBar:{

@@ -17,6 +17,9 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
     2016年11月22日
         1.加入react-native-router-flux 一款导航的第三方
         2.新增登录界面
+        3.Android添加沉浸代码 但是效果不佳暂时设置false关闭沉浸
+            MainActivity中有中文注释
+        4.新增注册界面
     2016年11月19日
         1.项目才开始没啥好记得，目前只做前段的UI部分，边学边做
         2.引入react-native-gifted-chat用于组件聊天UI

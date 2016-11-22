@@ -2,32 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.37.0/jars/classes.jar"
+        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="731e2c3a475cd3a3cb3536d6c32e72e1ad2ed09e">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-f4e34d2486a18756b07c434b79cc7b156cc66599.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1-83d30c24b0ab9e209d9bb0ff96e45bc4a8f4b0e0.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.37.0/jars/libs/infer-annotations-1.5.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6682334d34f00764e6753efcd15f060a4b95cda6">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-f10ed78b7db1eb19029438897d672e30b80260fc.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-716a83a26af81557781e6451f7cf2cc7633b0817.jar" />
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-5da7afcad690a00d90acce70f2eb6b61b0df14d2.jar" />
     </item>
     <item
         jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
@@ -37,67 +16,11 @@
         <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-30c80cb6f7cb5a9b5b1c9bda51ccf1179b541a92.jar" />
     </item>
     <item
-        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/javax.inject-1-41957ac7d8f3519c5d1d1b695383be7a7cb6d6ef.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-0551ecf9a3f6afa92708a962ceae847fb843ab8f.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-30069e5ac27bfda3fcafee2089729d5bf6b5718a.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-cdb4557554d6b16e619aa20d18ef94afb2194c45.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-a4610bb9567389fffef836270be38ff5baaeccae.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1-d0a50436d428dff844f4b6d54be9d912dfab4500.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-5da7afcad690a00d90acce70f2eb6b61b0df14d2.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-6fcefc9ede2bb3367ff7d477920889d7a0d106c0.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-c0d934b030c26a2494d12400a8e4e418e07a8423.jar" />
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0-fae61c09e2efab1a615736f734d0bea1536df210.jar" />
     </item>
     <item
         jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
@@ -107,11 +30,32 @@
         <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-bb88c0347e4825c73b0cbcfd1ccfd3db3856e98a.jar" />
     </item>
     <item
-        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/ITalk/react-native-vector-icons/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-2ecd47fbb6db54c51f8fa8589b0504a009cc8e9a.jar" />
+        sha1="14650fbaf0b1240b72cbd9a16ff9248d8df7c799">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-cbc04413469cd3b3a69ff9e2a026aa5c00021b5c.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1-d0a50436d428dff844f4b6d54be9d912dfab4500.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-cdb4557554d6b16e619aa20d18ef94afb2194c45.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/javax.inject-1-41957ac7d8f3519c5d1d1b695383be7a7cb6d6ef.jar" />
     </item>
     <item
         jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
@@ -121,18 +65,39 @@
         <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-1376e015cc42c32dd5f92278c289a05d723c2118.jar" />
     </item>
     <item
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-0551ecf9a3f6afa92708a962ceae847fb843ab8f.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-a4610bb9567389fffef836270be38ff5baaeccae.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1-83d30c24b0ab9e209d9bb0ff96e45bc4a8f4b0e0.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-c0d934b030c26a2494d12400a8e4e418e07a8423.jar" />
+    </item>
+    <item
         jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
         <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-e382507caba607a8dc55c36e9049c36f5c384278.jar" />
-    </item>
-    <item
-        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/ITalk/react-native-vector-icons/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="9fcbe7610a6910f8dd9945108dfb16f34181aaff">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-cbc04413469cd3b3a69ff9e2a026aa5c00021b5c.jar" />
     </item>
     <item
         jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
@@ -149,6 +114,27 @@
         <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-fdbb30379bd04485ca7abce09102fb6866a7b2eb.jar" />
     </item>
     <item
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-30069e5ac27bfda3fcafee2089729d5bf6b5718a.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-716a83a26af81557781e6451f7cf2cc7633b0817.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-2ecd47fbb6db54c51f8fa8589b0504a009cc8e9a.jar" />
+    </item>
+    <item
         jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -156,11 +142,18 @@
         <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-f656bcaadafc001f170e92f2535cc859812c44e5.jar" />
     </item>
     <item
-        jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.37.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0-fae61c09e2efab1a615736f734d0bea1536df210.jar" />
+        sha1="731e2c3a475cd3a3cb3536d6c32e72e1ad2ed09e">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-f4e34d2486a18756b07c434b79cc7b156cc66599.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.37.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6682334d34f00764e6753efcd15f060a4b95cda6">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-f10ed78b7db1eb19029438897d672e30b80260fc.jar" />
     </item>
     <item
         jar="/Users/lanccj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
@@ -168,6 +161,13 @@
         revision="23.0.1"
         sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
         <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1-417c472d3b7c306b215581b255ee9c10961fddcf.jar" />
+    </item>
+    <item
+        jar="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/Users/lanccj/Documents/Code/ReactNative/ITalk/android/app/build/intermediates/pre-dexed/debug/classes-6fcefc9ede2bb3367ff7d477920889d7a0d106c0.jar" />
     </item>
 
 </items>

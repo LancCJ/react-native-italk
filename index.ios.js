@@ -10,10 +10,9 @@ import {
 import {Actions, Scene, Router} from 'react-native-router-flux';
 //定义组件
 import AppLoginPage from './app/AppLoginPage';
-import MainPage from './app/MainPage';
-import ChatingRoom from './app/chat/ChatingRoom';
-
-
+import MainPage     from './app/MainPage';
+import ChatingRoom  from './app/chat/ChatingRoom';
+import RegisterPage from './app/RegisterPage';
 
 const styles = StyleSheet.create({
     navigationBarStyle:{
@@ -30,7 +29,13 @@ const scenes = Actions.create(
             key="AppLoginPage"
             component={AppLoginPage}
             title="爱聊ITalk用户登录"
-            hideTabBar={true}
+            navigationBarStyle={styles.navigationBarStyle}
+            titleStyle={styles.titleStyle}
+        />
+        <Scene
+            key="RegisterPage"
+            component={RegisterPage}
+            title="爱聊ITalk用户注册"
             navigationBarStyle={styles.navigationBarStyle}
             titleStyle={styles.titleStyle}
         />

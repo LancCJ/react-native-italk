@@ -6,19 +6,60 @@ import {
     View
 } from 'react-native';
 
-//自定义组件
-import NavigatorPage from './app/NavigatorPage';
+//第三方
+import {Actions, Scene, Router} from 'react-native-router-flux';
+//定义组件
+import AppLogin from './app/AppLogin';
+import MainPage from './app/MainPage';
+import ChatingRoom from './app/chat/ChatingRoom';
+
+
+
+const styles = StyleSheet.create({
+    navigationBarStyle:{
+        backgroundColor:"#0584FE"
+    },
+    titleStyle:{
+        color:"#FFFFFF"
+    }
+});
+
+const scenes = Actions.create(
+    <Scene key="root">
+        <Scene
+            key="AppLogin"
+            component={AppLogin}
+            title="爱聊ITalk用户登录"
+            hideTabBar={true}
+            navigationBarStyle={styles.navigationBarStyle}
+            titleStyle={styles.titleStyle}
+        />
+        <Scene
+            key="MainPage"
+            component={MainPage}
+            title="爱聊ITalk"
+            navigationBarStyle={styles.navigationBarStyle}
+            titleStyle={styles.titleStyle}
+        />
+        <Scene
+            key="ChatingRoom"
+            component={ChatingRoom}
+            title="聊天室"
+            navigationBarStyle={styles.navigationBarStyle}
+            titleStyle={styles.titleStyle}
+        />
+    </Scene>
+);
 
 export default class ITalk extends Component {
     render() {
         return (
-            <NavigatorPage/>
+            <Router
+                scenes={scenes}/>
         );
     }
 }
 
-const styles = StyleSheet.create({
 
-});
 
 AppRegistry.registerComponent('ITalk', () => ITalk);

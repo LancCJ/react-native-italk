@@ -3,25 +3,25 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    View
+    View,
+    Image,
+    ListView,
+    Alert
 } from 'react-native';
 
-
-export default class AppsPage extends Component {
-    render() {
+export default class Test extends Component {
+    render () {
         return (
             <View style={styles.container}>
-                <Text>暂时无可用应用</Text>
+                <Text style={[{color:"red"}]}>测试界面</Text>
             </View>
-        )
+        );
     }
 }
 
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:"#FFFFFF",
-        justifyContent:"center",
-        alignItems:"center"
+        backgroundColor:"#FFFFFF"
     }
 });

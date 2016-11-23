@@ -7,7 +7,9 @@ import {
     StyleSheet,
     Text,
     View,
-    Image
+    Image,
+    Alert,
+    TouchableOpacity
 } from 'react-native';
 
 import { FormLabel, FormInput ,Button} from 'react-native-elements'
@@ -18,7 +20,9 @@ export default class AppLogin extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.logo}>
-                    <Image source={require('../images/ITalk.png')}/>
+                    <Image
+                        style={[{width:182,height:51}]}
+                        source={require('../images/ITalk.png')}/>
                 </View>
                 <View style={styles.loginform}>
                     <FormLabel>用户名:</FormLabel>
@@ -43,8 +47,12 @@ export default class AppLogin extends Component {
                         onPress={Actions.RegisterPage}
                     />
                     <View style={[{margin:15,justifyContent:"space-between",flexDirection:"row",alignItems:"center"}]}>
-                        <Text style={[{marginLeft:5}]}>登录有问题?</Text>
-                        <Text>短信验证登录</Text>
+                        <TouchableOpacity onPress={_loginWithProblmes}>
+                            <Text style={[{marginLeft:5}]}>登录有问题?</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={_loginUsePhone}>
+                            <Text>短信验证登录</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.copyRight}>
@@ -64,11 +72,9 @@ const styles = StyleSheet.create({
         alignItems:"center"
     },
     logo:{
+        marginTop:30,
         justifyContent:"center",
-        alignItems:"center",
-        marginTop:10,
-        flex:1,
-        height:20
+        alignItems:"center"
     },
     loginform:{
         flex:1,
@@ -82,4 +88,12 @@ const styles = StyleSheet.create({
     textInput:{
     }
 });
+
+const _loginWithProblmes=()=>{
+    Alert.alert('跳转到修改密码找回密码界面');
+}
+
+const _loginUsePhone=()=>{
+    Alert.alert('跳转到使用短信验证登录界面');
+}
 

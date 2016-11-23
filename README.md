@@ -54,7 +54,6 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
 2.程序截图
 --------
 ![程序动态截图1](https://github.com/LancCJ/react-native-italk/raw/master/doc/Screenshot/ScreenShot1.gif)
-![程序动态截图2](https://github.com/LancCJ/react-native-italk/raw/master/doc/Screenshot/ScreenShot2.gif)
 
 
 

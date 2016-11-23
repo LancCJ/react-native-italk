@@ -13,11 +13,11 @@ import {
 import {Actions, Scene, Router} from 'react-native-router-flux';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 //定义组件
-import ErrorPage from './app/ErrorPage';
-import AppLoginPage from './app/AppLoginPage';
-import MainPage     from './app/MainPage';
-import ChatingRoom  from './app/chat/ChatingRoom';
-import RegisterPage from './app/RegisterPage';
+import ErrorPage from './ErrorPage';
+import AppLoginPage from './AppLoginPage';
+import MainPage     from './MainPage';
+import ChatingRoom  from './chat/ChatingRoom';
+import RegisterPage from './RegisterPage';
 
 const styles = StyleSheet.create({
     navigationBarStyle:{

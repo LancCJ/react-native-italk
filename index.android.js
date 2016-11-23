@@ -9,6 +9,7 @@ import {
 //第三方
 import {Actions, Scene, Router} from 'react-native-router-flux';
 //定义组件
+import ErrorPage from './app/ErrorPage';
 import AppLoginPage from './app/AppLoginPage';
 import MainPage     from './app/MainPage';
 import ChatingRoom  from './app/chat/ChatingRoom';
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
     }
 });
 
+//APP所有场景定义
 const scenes = Actions.create(
     <Scene key="root">
         <Scene
@@ -38,6 +40,8 @@ const scenes = Actions.create(
             title="爱聊ITalk用户注册"
             navigationBarStyle={styles.navigationBarStyle}
             titleStyle={styles.titleStyle}
+            leftTitle="Left"
+            onLeft={()=>alert("Left button!")}
         />
         <Scene
             key="MainPage"
@@ -53,6 +57,7 @@ const scenes = Actions.create(
             navigationBarStyle={styles.navigationBarStyle}
             titleStyle={styles.titleStyle}
         />
+        <Scene key="ErrorPage" component={ErrorPage}/>
     </Scene>
 );
 

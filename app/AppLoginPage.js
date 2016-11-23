@@ -22,9 +22,14 @@ export default class AppLogin extends Component {
                 </View>
                 <View style={styles.loginform}>
                     <FormLabel>用户名:</FormLabel>
-                    <FormInput/>
+                    <FormInput
+                        style={[styles.textInput,{marginTop:2}]}
+                        placeholder='    用户名或手机号或邮箱'
+                    />
                     <FormLabel>密  码:</FormLabel>
-                    <FormInput/>
+                    <FormInput
+                        style={[styles.textInput,{marginTop:2}]}
+                    />
                     <Button
                         buttonStyle={{marginTop:20,height:40}}
                         title='登    录'
@@ -73,6 +78,8 @@ const styles = StyleSheet.create({
     },
     copyRight:{
         marginBottom:5
+    },
+    textInput:{
     }
 });
 

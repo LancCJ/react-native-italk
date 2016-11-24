@@ -13,11 +13,12 @@ import {
 import {Actions, Scene, Router} from 'react-native-router-flux';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 //定义组件
-import ErrorPage from './ErrorPage';
+import AboutPage    from './AboutPage';
+import ErrorPage    from './ErrorPage';
 import AppLoginPage from './AppLoginPage';
 import MainPage     from './MainPage';
-import ChatingRoom  from './chat/ChatingRoom';
 import RegisterPage from './RegisterPage';
+import ChatingRoom  from './chat/ChatingRoom';
 
 const styles = StyleSheet.create({
     navigationBarStyle:{
@@ -77,6 +78,14 @@ const scenes = Actions.create(
             renderBackButton={_renderBackButton}
             component={ChatingRoom}
             title="聊天室"
+            navigationBarStyle={styles.navigationBarStyle}
+            titleStyle={styles.titleStyle}
+        />
+        <Scene
+            key="AboutPage"
+            renderBackButton={_renderBackButton}
+            component={AboutPage}
+            title="关于"
             navigationBarStyle={styles.navigationBarStyle}
             titleStyle={styles.titleStyle}
         />

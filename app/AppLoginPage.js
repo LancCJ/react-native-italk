@@ -15,7 +15,7 @@ import {
 import { FormLabel, FormInput ,Button} from 'react-native-elements'
 import {Actions} from 'react-native-router-flux'
 
-export default class AppLogin extends Component {
+export default class AppLoginPage extends Component {
     render () {
         return (
             <View style={styles.container}>

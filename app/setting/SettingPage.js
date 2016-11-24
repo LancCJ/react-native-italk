@@ -11,6 +11,8 @@ import {
 
 //第三方组件
 import { Button } from 'react-native-elements'
+import {Actions} from 'react-native-router-flux'
+
 //自定义
 import UserInfo   from './UserInfo';
 import Settings   from './Settings';
@@ -29,23 +31,30 @@ export default class SettingPage extends Component {
                 <Button
                     buttonStyle={{marginTop:20,height:40}}
                     title='注销账号'
-                    backgroundColor="#007AFF"/>
+                    backgroundColor="#007AFF"
+                    onPress={clickBtnLogout}
+                />
                 <Button
                     buttonStyle={{marginTop:10,height:40}}
                     title='注销并退出'
                     color="#FF4917"
-                    backgroundColor="#007AFF"/>
+                    backgroundColor="#007AFF"
+                    onPress={clickBtnLogoutAndExit}
+                />
             </ScrollView>
         )
     }
 }
 
 const clickBtnLogout = () => {
-    Alert.alert('你点击了注销按钮');
+    //处理些注销操作
+    //跳转到登录界面
+    Actions.AppLoginPage()
 };
 
 const clickBtnLogoutAndExit = () => {
-    Alert.alert('你点击了注销且推出按钮');
+    //处理些注销操作
+    //退出程序
 };
 
 const styles = StyleSheet.create({

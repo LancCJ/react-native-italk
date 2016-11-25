@@ -19,6 +19,8 @@ import AppLoginPage from './AppLoginPage';
 import MainPage     from './MainPage';
 import RegisterPage from './RegisterPage';
 import ChatingRoom  from './chat/ChatingRoom';
+import CommonSettingPage  from './setting/common/CommonSettingPage';
+
 
 const styles = StyleSheet.create({
     navigationBarStyle:{
@@ -50,7 +52,7 @@ const _renderBackButton=()=>{
 const scenes = Actions.create(
     <Scene key="root">
         <Scene
-            initial={true}
+
             key="AppLoginPage"
             component={AppLoginPage}
             title="爱聊ITalk用户登录"
@@ -66,6 +68,7 @@ const scenes = Actions.create(
             titleStyle={styles.titleStyle}
         />
         <Scene
+            initial={true}
             key="MainPage"
             renderBackButton={_renderBackButton}
             component={MainPage}
@@ -86,6 +89,14 @@ const scenes = Actions.create(
             renderBackButton={_renderBackButton}
             component={AboutPage}
             title="关于"
+            navigationBarStyle={styles.navigationBarStyle}
+            titleStyle={styles.titleStyle}
+        />
+        <Scene
+            key="CommonSettingPage"
+            renderBackButton={_renderBackButton}
+            component={CommonSettingPage}
+            title="通用设置"
             navigationBarStyle={styles.navigationBarStyle}
             titleStyle={styles.titleStyle}
         />

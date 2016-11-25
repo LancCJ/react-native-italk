@@ -21,7 +21,7 @@ export default class MainPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab:'setting'//setting chats
+            selectedTab:'chats'//setting chats friends
         };
     }
     render() {

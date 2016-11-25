@@ -16,7 +16,9 @@ import { List, ListItem } from 'react-native-elements'
 const list = [
     {
         title: '我的设备',
-        icon: 'av-timer'
+        icon: 'md-phone-portrait',
+        color:'#5722FF',
+        type:'ionicon'
     }
 ]
 
@@ -33,7 +35,7 @@ export default class Equipments extends Component {
                         <ListItem
                             key={i}
                             title={item.title}
-                            leftIcon={{name: item.icon}}
+                            leftIcon={{name: item.icon,color:item.color,type:item.type}}
                             onPress={_onPress}
                         />
                     ))

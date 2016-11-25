@@ -11,9 +11,10 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 
 //自定义组件
-import FriendsList from './FriendsList';
 import Communication from './Communication';
+import NewFriends from './NewFriends';
 import Equipments from './Equipments';
+import FriendsList from './FriendsList';
 
 
 
@@ -23,6 +24,7 @@ export default class FriendsPage extends Component {
         return (
             <View style={styles.container}>
                 <Communication/>
+                <NewFriends/>
                 <Equipments/>
                 <FriendsList/>
             </View>

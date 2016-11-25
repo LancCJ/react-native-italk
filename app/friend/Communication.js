@@ -15,18 +15,21 @@ import { List, ListItem } from 'react-native-elements'
 const list = [
     {
         title: '通讯录',
-        icon: 'av-timer',
-        color:'#FFA102'
+        icon: 'phone-square',
+        color:'#FFA102',
+        type:'font-awesome'
     },
     {
         title: '群组',
-        icon: 'flight-takeoff',
-        color:'#1A7FEE'
+        icon: 'users',
+        color:'#1A7FEE',
+        type:'font-awesome'
     },
     {
         title: '订阅号',
-        icon: 'flight-takeoff',
-        color:'#00B0FF'
+        icon: 'check-square',
+        color:'#00B0FF',
+        type:'font-awesome'
     }
 ]
 
@@ -43,7 +46,7 @@ export default class Communication extends Component {
                         <ListItem
                             key={i}
                             title={item.title}
-                            leftIcon={{name: item.icon,color:item.color}}
+                            leftIcon={{name: item.icon,color:item.color,type:item.type}}
                             onPress={_onPress}
                         />
                     ))

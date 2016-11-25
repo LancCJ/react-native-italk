@@ -18,14 +18,16 @@ const list = [
     {
         id:'Share',
         title: '分享此应用',
-        icon: 'av-timer',
-        color:'#FFA102'
+        icon: 'share-alt-square',
+        color:'#3AC936',
+        type:'font-awesome'
     },
     {
         id:"About",
         title: '关于',
-        icon: 'flight-takeoff',
-        color:'#1A7FEE'
+        icon: 'info-circle',
+        color:'#DE1F00',
+        type:'font-awesome'
     }
 ]
 /**
@@ -40,9 +42,8 @@ export default class ShareAbout extends Component {
                         <ListItem
                             key={i}
                             title={item.title}
-                            leftIcon={{name: item.icon,color:item.color}}
-                            onPress={clickBtnShare}
-                            //onPress={_onPress(item.id)}
+                            leftIcon={{name: item.icon,color:item.color,type:item.type}}
+                            onPress={(id)=>_onPress(item.id)}
                         />
                     ))
                 }
@@ -52,26 +53,19 @@ export default class ShareAbout extends Component {
 }
 
 let shareOptions = {
-    title: "React Native",
-    message: "Hola mundo",
-    url: "http://facebook.github.io/react-native/",
+    title: "分享 爱聊ITalk",
+    message: "快来使用 爱聊ITalk项目开源地址:",
+    url: "https://github.com/LancCJ/react-native-italk",
     subject: "Share Link" //  for email
 };
 
-// const _onPress = (id) => {
-//     if(id==='Share'){
-//         clickBtnShare;
-//     }else if(id==='About'){
-//         clickBtnAbout;
-//     }
-// };
-
-const clickBtnShare = () => {
-    Share.open(shareOptions);
-};
-
-const clickBtnAbout = () => {
-    Actions.AboutPage;
+const _onPress = (id) => {
+    //Alert.alert('点击了'+id);
+    if(id==='Share'){
+        Share.open(shareOptions);
+    }else if(id==='About'){
+        Actions.AboutPage();
+    }
 };
 
 const styles = StyleSheet.create({

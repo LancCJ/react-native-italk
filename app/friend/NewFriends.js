@@ -5,34 +5,37 @@ import {
     Text,
     View,
     Image,
+    ListView,
     Alert
 } from 'react-native';
+
 //第三方组件
 import { List, ListItem } from 'react-native-elements'
 
-/***
- * 用户信息
- */
-
 const list = [
     {
-        userName: 'bu嗨森~'
+        title: '新朋友',
+        icon: 'md-person-add',
+        color:'#F70055',
+        type:'ionicon'
     }
 ]
 
-export default class UserInfo extends Component {
+
+/**
+ * 新朋友
+ * */
+export default class NewFriends extends Component {
     render () {
         return (
-            <List containerStyle={[{marginTop:0},styles.container]}>
+            <List containerStyle={{marginTop:0}}>
                 {
                     list.map((item, i) => (
                         <ListItem
                             key={i}
-                            title={item.userName}
-                            avatar={require('../../images/user/userPic.jpg')}
+                            title={item.title}
+                            leftIcon={{name: item.icon,color:item.color,type:item.type}}
                             onPress={_onPress}
-                            containerStyle={[{height:100}]}
-                            avatarStyle={[{height:80,width:80}]}
                         />
                     ))
                 }
@@ -46,7 +49,5 @@ const _onPress=()=>{
 }
 
 const styles = StyleSheet.create({
-    container:{
-    }
 
 });

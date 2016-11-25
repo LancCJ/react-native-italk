@@ -52,7 +52,7 @@ const _renderBackButton=()=>{
 const scenes = Actions.create(
     <Scene key="root">
         <Scene
-
+            initial={true}
             key="AppLoginPage"
             component={AppLoginPage}
             title="爱聊ITalk用户登录"
@@ -68,7 +68,7 @@ const scenes = Actions.create(
             titleStyle={styles.titleStyle}
         />
         <Scene
-            initial={true}
+
             key="MainPage"
             renderBackButton={_renderBackButton}
             component={MainPage}

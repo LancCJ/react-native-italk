@@ -5,7 +5,7 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
 ==================================================================
 后续内容:
 
-    1.继续完善，加入后台RestFul服务,后台项目地址https://github.com/LancCJ/java-italkserver
+    1.继续完善，加入后台RestFul服务,后台项目地址[java-italkserver](https://github.com/LancCJ/java-italkserver)
     2.使用fetch请求数据 在主动关闭服务后的处理需要搞一下
           请求发送一个无效的地址(主动关闭后台服务,导致无法登陆) 进行提示
 
@@ -13,7 +13,7 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
 ==================================================================
 版本更新日志:
 
-    2016年11月29日（这个版本开始加入后台服务请求才能运行）
+    2016年11月29日（这个版本开始加入后台服务请求才能运行[java-italkserver](https://github.com/LancCJ/java-italkserver)）
         1.添加了一个网络请求的封装Component 路径：common/utils/NetUitl
         2.添加了一个定义一些不修改常量的Component 路径:common/Constants
             里面定义了HostUrl路径以及其他请求的路径

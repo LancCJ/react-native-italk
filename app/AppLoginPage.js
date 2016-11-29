@@ -12,8 +12,14 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+//第三方
 import { FormLabel, FormInput ,Button} from 'react-native-elements'
 import {Actions} from 'react-native-router-flux'
+//自定义
+import NetUtil from './common/utils/NetUtil'
+import Constant from './common/Constant'
+import StateCode from './common/StateCode'
+
 
 export default class AppLoginPage extends Component {
     render () {
@@ -38,7 +44,7 @@ export default class AppLoginPage extends Component {
                         buttonStyle={{marginTop:20,height:40}}
                         title='登    录'
                         backgroundColor="#007AFF"
-                        onPress={Actions.MainPage}
+                        onPress={_btnOnClickLogin}
                     />
                     <Button
                         buttonStyle={{marginTop:10,height:40}}
@@ -96,4 +102,24 @@ const _loginWithProblmes=()=>{
 const _loginUsePhone=()=>{
     Alert.alert('跳转到使用短信验证登录界面');
 }
+
+const _btnOnClickLogin=()=>{
+    var params = new Map();
+    params.set('userName','lanccj');
+    params.set('userPwd','123456');
+    // var headers = new Headers();
+    // headers.append('Content-Type', 'text/plain');
+    // headers.append('Content-Type', 'text/plain');
+    NetUtil.post(Constant.UserLoginUrl,params,callbackLogin);
+}
+
+const callbackLogin=(response)=>{
+    if(StateCode.SUCCESS===response.code){
+        Alert.alert('登录成功，获取到的参数:'+response.data.token);
+        Actions.MainPage();
+    }else{
+        Alert.alert('登录失败，返回错误:'+response.message);
+    }
+}
+
 

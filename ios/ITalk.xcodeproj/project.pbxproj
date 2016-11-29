@@ -16,6 +16,7 @@
 		0C1870CB1DE803FA0063BFF2 /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1870CA1DE803C80063BFF2 /* libRNShare.a */; };
 		0C1870CD1DE8040D0063BFF2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1870CC1DE8040D0063BFF2 /* Social.framework */; };
 		0C1870CF1DE8041A0063BFF2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1870CE1DE8041A0063BFF2 /* MessageUI.framework */; };
+		0C6951821DED8D470080217A /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C69516D1DED8D390080217A /* libART.a */; };
 		0F4A85D12A8543DDAA943147 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C421C2DFEE14B5695A80983 /* MaterialIcons.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -152,6 +153,13 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
+		0C69516C1DED8D390080217A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C6951681DED8D390080217A /* ART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = ART;
+		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
@@ -203,6 +211,7 @@
 		0C1870A61DE803C70063BFF2 /* RNShare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNShare.xcodeproj; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; };
 		0C1870CC1DE8040D0063BFF2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0C1870CE1DE8041A0063BFF2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0C6951681DED8D390080217A /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ITalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6951821DED8D470080217A /* libART.a in Frameworks */,
 				0C1870CF1DE8041A0063BFF2 /* MessageUI.framework in Frameworks */,
 				0C1870CD1DE8040D0063BFF2 /* Social.framework in Frameworks */,
 				0C1870CB1DE803FA0063BFF2 /* libRNShare.a in Frameworks */,
@@ -346,6 +356,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		0C6951691DED8D390080217A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C69516D1DED8D390080217A /* libART.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +445,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0C6951681DED8D390080217A /* ART.xcodeproj */,
 				0C1870CE1DE8041A0063BFF2 /* MessageUI.framework */,
 				0C1870CC1DE8040D0063BFF2 /* Social.framework */,
 				0C1870A61DE803C70063BFF2 /* RNShare.xcodeproj */,
@@ -531,6 +550,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 0C6951691DED8D390080217A /* Products */;
+					ProjectRef = 0C6951681DED8D390080217A /* ART.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -696,6 +719,13 @@
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
 			remoteRef = 0C1870F51DE8052A0063BFF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0C69516D1DED8D390080217A /* libART.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libART.a;
+			remoteRef = 0C69516C1DED8D390080217A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {

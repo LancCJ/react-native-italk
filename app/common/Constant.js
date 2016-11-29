@@ -20,7 +20,7 @@ import {
 export default class Constants extends Component {
 
     //服务器IP地址
-    static HostUrl='http://192.168.0.100:8089/api/';
+    static HostUrl='http://192.168.123.127:8089/api/';
     //各个服务的请求路径
     static UserLoginUrl=Constants.HostUrl+'user/login.json';
 }

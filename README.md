@@ -20,6 +20,8 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
             里面定义了HostUrl路径以及其他请求的路径
         3.统一服务器端和客户端 错误码的定义 定义文件    common/StateCode
         4.实现简单登录 需要配合后台服务
+
+        5.加入2个组件 (react-native-progress,react-native-modalbox@latest)打算用来做弹出的进度
     2016年11月25日
         1.更新react-native版本到0.38.0,react版本到15.4.1
         2.在使用react-native-elements 里面的List时候区分了每个点击 然后进行不同页面跳转
@@ -52,6 +54,8 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
     5.react-native-gifted-chat 聊天的一个UI组件，自己就不用辛苦写了嘛感谢老外 FaridSafi
     6.react-native-router-flux 一款导航器进行了封装方便管理页面管理，这里又偷懒了 呵呵 原谅我！
     7.react-native-share 一款分享的组件
+    8.react-native-progress 一款进度条的组件
+    9.react-native-modalbox@latest modal组件
 
 
 ==================================================================

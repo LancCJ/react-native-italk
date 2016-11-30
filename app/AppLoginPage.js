@@ -13,9 +13,10 @@ import {
 } from 'react-native';
 
 //第三方
-import { FormLabel, FormInput ,Button} from 'react-native-elements'
+import { FormLabel, FormInput ,Button,SocialIcon} from 'react-native-elements'
 import {Actions} from 'react-native-router-flux'
 var Modal = require('react-native-modalbox');
+import * as QQAPI from 'react-native-qq';
 //自定义
 import NetUtil from './common/utils/NetUtil'
 import Constant from './common/Constant'
@@ -80,7 +81,7 @@ export default class AppLoginPage extends Component {
                         value='123456'
                     />
                     <Button
-                        buttonStyle={{marginTop:20,height:40}}
+                        buttonStyle={{marginTop:5,height:40}}
                         title='登    录'
                         backgroundColor="#007AFF"
                         onPress={this._btnOnClickLogin}
@@ -101,6 +102,28 @@ export default class AppLoginPage extends Component {
                     </View>
                 </View>
                 <View style={styles.copyRight}>
+                    <View style={styles.thirdLogin}>
+                        <View style={styles.thirdLoginText}>
+                            <Text>--------其他登录方式--------</Text>
+                        </View>
+                        <View style={[{flexDirection:"row",justifyContent: 'center', alignItems: 'center'}]}>
+                            <SocialIcon
+                                title='QQ登录'
+                                type='qq'
+                                onPress={(shareType)=>_onClickThirdLogin('QQ')}
+                            />
+                            <SocialIcon
+                                title='微信登录'
+                                type='wechat'
+                                onPress={(shareType)=>_onClickThirdLogin('WEIXIN')}
+                            />
+                            <SocialIcon
+                                title='微博登录'
+                                type='weibo'
+                                onPress={(shareType)=>_onClickThirdLogin('SINA')}
+                            />
+                        </View>
+                    </View>
                     <Text>Copyright © 2016-, LancCJ, All Rights Reserved</Text>
                 </View>
 
@@ -121,13 +144,12 @@ const styles = StyleSheet.create({
         alignItems:"center"
     },
     logo:{
-        marginTop:30,
+        marginTop:10,
         justifyContent:"center",
         alignItems:"center"
     },
     loginform:{
         flex:1,
-        marginTop:5,
         height:300,
         width:400
     },
@@ -151,6 +173,13 @@ const styles = StyleSheet.create({
     },
     btn:{
 
+    },
+    thirdLogin:{
+
+    },
+    thirdLoginText:{
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
 
@@ -161,6 +190,18 @@ const _loginWithProblmes=()=>{
 const _loginUsePhone=()=>{
     Alert.alert('跳转到使用短信验证登录界面');
 }
+
+const _onClickThirdLogin=(shareType)=>{
+    if(shareType==='QQ'){
+        QQAPI.login()
+            .then(() => waitForResponse("QQAuthorizeResponse"));
+    }else{
+        Alert.alert('第三方登录'+shareType);
+    }
+
+}
+
+
 
 
 

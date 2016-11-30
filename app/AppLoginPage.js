@@ -194,11 +194,18 @@ const _loginUsePhone=()=>{
 const _onClickThirdLogin=(shareType)=>{
     if(shareType==='QQ'){
         QQAPI.login()
-            .then(() => waitForResponse("QQAuthorizeResponse"));
+            .then((result)=>{
+                console.log('QQAPI() result', result)
+                //console.log(result.access_token);
+            })
+            .catch((e)=>{
+                console.error(e);
+            })
     }else{
         Alert.alert('第三方登录'+shareType);
     }
 
+    Actions.MainPage();
 }
 
 

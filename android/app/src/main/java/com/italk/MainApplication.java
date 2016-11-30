@@ -1,6 +1,7 @@
 package com.italk;
 
 import android.app.Application;
+import android.content.Intent;
 import android.util.Log;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -10,6 +11,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.oblador.vectoricons.VectorIconsPackage;
 import cl.json.RNSharePackage;
+import cn.reactnative.modules.qq.QQPackage;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,8 +28,9 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new VectorIconsPackage(),
-          new RNSharePackage()
-      );
+          new RNSharePackage(),
+          new QQPackage()
+          );
     }
   };
 
@@ -41,4 +44,6 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
   }
+
+
 }

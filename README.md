@@ -10,9 +10,15 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
     2.使用fetch请求数据 在主动关闭服务后的处理需要搞一下
          请求发送一个无效的地址(主动关闭后台服务,导致无法登陆) 进行提示
     3.QQ
+        这是android 
          APP ID   1105855384
          
          APP KEY  nlHIo7gpNa5ZZk95
+         
+         这是IOS 
+         APP ID   1105855852
+         
+         APP KEY   MyMuxyL8XWGpNQ1A
       Wechat
            
 
@@ -21,7 +27,8 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
 版本更新日志:
 
     2016年11月30日
-        1.加入 QQ登录
+        1.加入 QQ登录(IOS Android)
+        
     2016年11月29日（这个版本开始加入后台服务请求才能运行）
         1.添加了一个网络请求的封装Component 路径：common/utils/NetUitl
         2.添加了一个定义一些不修改常量的Component 路径:common/Constants

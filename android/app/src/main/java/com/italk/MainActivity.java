@@ -1,10 +1,12 @@
 package com.italk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Build;
 import com.facebook.react.ReactActivity;
 import android.view.Window;
 import android.view.WindowManager;
+
 
 public class MainActivity extends ReactActivity {
 
@@ -37,7 +39,12 @@ public class MainActivity extends ReactActivity {
             }
         }
 
-        //是否statusBar 状态栏为透明 的方法 默认为真
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    //是否statusBar 状态栏为透明 的方法 默认为真
         protected boolean isTranslucentStatusBar() {
             return false;
     }

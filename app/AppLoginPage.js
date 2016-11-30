@@ -195,17 +195,20 @@ const _onClickThirdLogin=(shareType)=>{
     if(shareType==='QQ'){
         QQAPI.login()
             .then((result)=>{
-                console.log('QQAPI() result', result)
                 //console.log(result.access_token);
+                //console.log('QQAPI() result', result)
+                Alert.alert('第三方登录'+result.access_token);
             })
             .catch((e)=>{
                 console.error(e);
             })
+    }if(shareType==='WEIXIN'){
+        Alert.alert('微信登录要付费不做了');
     }else{
-        Alert.alert('第三方登录'+shareType);
+        Alert.alert('微博第三方登录');
     }
 
-    Actions.MainPage();
+
 }
 
 

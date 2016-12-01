@@ -195,9 +195,9 @@ const _onClickThirdLogin=(shareType)=>{
     if(shareType==='QQ'){
         QQAPI.login()
             .then((result)=>{
-                //console.log(result.access_token);
+                console.log(result.access_token);
                 //console.log('QQAPI() result', result)
-                Alert.alert('第三方登录'+result.access_token);
+                //Alert.alert('第三方登录'+result.access_token);
             })
             .catch((e)=>{
                 console.error(e);

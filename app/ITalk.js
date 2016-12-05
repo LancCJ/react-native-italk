@@ -6,7 +6,7 @@ import {
     View,
     Image,
     TouchableOpacity,
-    Alert
+    Alert,StatusBar
 } from 'react-native';
 
 //第三方
@@ -107,8 +107,14 @@ const scenes = Actions.create(
 export default class ITalk extends Component {
     render() {
         return (
-            <Router
-                scenes={scenes}/>
+            <View style={{ flex: 1 }}>
+                <StatusBar
+                    backgroundColor="#0584FE"
+                    barStyle="light-content"
+                />
+                <Router
+                    scenes={scenes}/>
+            </View>
         );
     }
 }

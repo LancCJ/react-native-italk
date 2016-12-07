@@ -18,7 +18,11 @@
     "react-native-router-flux": "^3.37.0",
     "react-native-share": "^1.0.17",
     "react-native-tab-navigator": "^0.3.3",
-    "react-native-vector-icons": "^3.0.0"
+    "react-native-vector-icons": "^3.0.0",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-saga": "^0.13.0"
   },
   "devDependencies": {
     "babel-jest": "17.0.2",

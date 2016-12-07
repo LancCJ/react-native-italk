@@ -2,6 +2,6 @@ import {
     AppRegistry,
 } from 'react-native';
 
-import ITalk from './app/ITalk';
+import Root from './app/Root';
 
-AppRegistry.registerComponent('ITalk', () => ITalk);
+AppRegistry.registerComponent('ITalk', () => Root);

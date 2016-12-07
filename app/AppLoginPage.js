@@ -111,16 +111,19 @@ export default class AppLoginPage extends Component {
                                 title='QQ登录'
                                 type='qq'
                                 onPress={(shareType)=>_onClickThirdLogin('QQ')}
+                                style={{ backgroundColor:"#FF0000"}}
                             />
                             <SocialIcon
                                 title='微信登录'
                                 type='wechat'
                                 onPress={(shareType)=>_onClickThirdLogin('WEIXIN')}
+                                style={{ backgroundColor:"#32C739"}}
                             />
                             <SocialIcon
                                 title='微博登录'
                                 type='weibo'
                                 onPress={(shareType)=>_onClickThirdLogin('SINA')}
+                                style={{ backgroundColor:"#EA7A00"}}
                             />
                         </View>
                     </View>

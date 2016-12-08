@@ -22,24 +22,30 @@ import {bindActionCreators} from 'redux';//将要绑定的actions和dispatch绑�
 import * as actionCreators from './redux/actions/UserActions';//导入需要绑定的actions
 
 
-export default class AppLoginPage extends Component {
+class AppLoginPage extends Component {
     constructor(props) {
         super(props);
+        this.state={
+        }
+
+        this.login=this.login.bind(this);
+        this.onChangeUserName=this.onChangeUserName.bind(this);
+        this.onChangePswd=this.onChangePswd.bind(this);
     }
 
-    login=this._login.bind(this);
-    onChangeUserName=this._onChangeUserName.bind(this);
-    onChangePswd=this._onChangePswd.bind(this);
 
-    _onChangeUserName(text){
+
+
+
+    onChangeUserName(text){
         this.setState({'userName':text});
     }
 
-    _onChangePswd(text){
+    onChangePswd(text){
         this.setState({'userPwd':text});
     }
 
-    _login(){
+    login(){
 
         if(!this.state.userName||!this.state.userPwd){
             Alert.alert('用户名或密码不能为空！');
@@ -74,14 +80,14 @@ export default class AppLoginPage extends Component {
                     <FormInput
                         style={[styles.textInput,{marginTop:2}]}
                         placeholder='    用户名或手机号或邮箱'
-                        value='lanccj'
+                        //value='lanccj'
                         onChangeText={this.onChangeUserName}
                     />
                     <FormLabel>密  码:</FormLabel>
                     <FormInput
                         style={[styles.textInput,{marginTop:2}]}
                         secureTextEntry={true}
-                        value='123456'
+                        //value='123456'
                         onChangeText={this.onChangePswd}
                     />
                     <Button
@@ -134,7 +140,7 @@ export default class AppLoginPage extends Component {
                     <Text>Copyright © 2016-, LancCJ, All Rights Reserved</Text>
                 </View>
 
-                <Modal animationduration="{0}" isopen="{this.props.status=='doing'?true:false}" position={"center"} ref='modal' style="{styles.modal}"/>
+                <Modal animationduration="{0}" isopen="{this.props.status=='doing'?true:false}" position={"center"} ref='modal' style={styles.modal}/>
             </View>
         );
     }
@@ -168,10 +174,11 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     modal: {
-        height: 300,
-        width: 300,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        width:150,
+        height:150,
+        borderRadius:10,
     },
     text:{
 
@@ -219,8 +226,8 @@ const _onClickThirdLogin=(shareType)=>{
 //根据全局state返回当前页面所需要的信息,（注意以props的形式传递给AppLoginPage）
 function mapStateToProps(state){
     return{
-        isLoggedIn:state.user.isLoggedIn,
-        status:state.user.status,
+        isLoggedIn:state.isLoggedIn,
+        status:state.status,
     };
 }
 //返回可以操作store.state的actions,(其实就是我们可以通过actions来调用我们绑定好的一系列方法)
@@ -231,7 +238,7 @@ function mapDispatchToProps(dispatch){
 }
 
 //链接起来
-connect(mapStateToProps,mapDispatchToProps)(AppLoginPage);
+export default  connect(mapStateToProps,mapDispatchToProps)(AppLoginPage);
 
 
 

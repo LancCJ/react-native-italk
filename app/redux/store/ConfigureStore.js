@@ -17,10 +17,9 @@
  */
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware, { END } from 'redux-saga';
-
+import thunk from 'redux-thunk';//引入异步操作
 import rootReducer from '../reducers/index';
-
-const middlewares = [];
+const middlewares = [thunk];
 const createLogger = require('redux-logger');
 
 // configuring saga middleware

@@ -1,3 +1,19 @@
+//登录
+export const LOGIN_ING = 'LOGIN_ING';
+export const LOGIN = 'LOGIN';
+export const LOGIN_ERROR = 'LOGIN_ERROR';
+export const LOGOUT = 'LOGOUT';
+
+
+
+
+
+
+
+
+
+
+
 export const REQUEST_ARTICLE_LIST = 'REQUEST_ARTICLE_LIST';
 export const FETCH_ARTICLE_LIST = 'FETCH_ARTICLE_LIST';
 export const RECEIVE_ARTICLE_LIST = 'RECEIVE_ARTICLE_LIST';

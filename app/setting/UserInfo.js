@@ -9,14 +9,15 @@ import {
 } from 'react-native';
 //第三方组件
 import { List, ListItem } from 'react-native-elements'
-
+import configureStore from '../redux/store/ConfigureStore';
+const store = configureStore();
 /***
  * 用户信息
  */
 
 const list = [
     {
-        userName: 'bu嗨森~'
+        userName: store.userName
     }
 ]
 

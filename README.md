@@ -21,6 +21,7 @@ How to Use(以下开始我就用中文，干啥每个项目都E文。。。。�
          APP KEY   MyMuxyL8XWGpNQ1A
       Wechat
     4.第三方登录 暂时没找到合适的组件,先做其他功能  
+    5.一些marginBottom的组件会因为键盘弹起往上弹
            
 
 

@@ -3,10 +3,10 @@
  */
 import React, {Component} from 'react';
 import {Provider} from 'react-redux';
-import ITalk from './ITalk';
 
+import ITalk from './ITalk';
 import configureStore from './redux/store/ConfigureStore';
-const store = configureStore();
+const  store = configureStore();
 
 /**
  *使用Redux入口

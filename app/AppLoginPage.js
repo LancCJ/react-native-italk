@@ -1,6 +1,7 @@
 /**
  * Created by lanccj on 16/11/22.
  */
+'use strict'
 import React, { Component } from 'react';
 import {
     AppRegistry,
@@ -21,21 +22,19 @@ import {connect} from 'react-redux';//将我们的页面和action链接起来
 import {bindActionCreators} from 'redux';//将要绑定的actions和dispatch绑定到一起
 import * as actionCreators from './redux/actions/UserActions';//导入需要绑定的actions
 
+import Storage from './common/Storage';
+
+
 
 class AppLoginPage extends Component {
     constructor(props) {
         super(props);
         this.state={
         }
-
         this.login=this.login.bind(this);
         this.onChangeUserName=this.onChangeUserName.bind(this);
         this.onChangePswd=this.onChangePswd.bind(this);
     }
-
-
-
-
 
     onChangeUserName(text){
         this.setState({'userName':text});
@@ -46,23 +45,23 @@ class AppLoginPage extends Component {
     }
 
     login(){
-
         if(!this.state.userName||!this.state.userPwd){
             Alert.alert('用户名或密码不能为空！');
         }else{
-            this.refs.modal.open();//loading 状态
-            this.props.actions.login({'userName':this.state.userName,'userPwd':this.state.userPwd});//dispath 登陆
+
+
+
+            this.props.loginActions.login({'userName':this.state.userName,'userPwd':this.state.userPwd});//dispath 登陆
         }
     }
 
-    //该方法首次不会执行，如果返回false，则reduer不会执行，，
+    //该方法首次不会执行，如果返回false，则reduer不会执行
     shouldComponentUpdate(nextProps,nextState){
         const {isLoggedIn}=nextProps;
         if(isLoggedIn){
+
             this.setState({userName:'',userPwd:''});
-
             Actions.MainPage();
-
         }
         return true;
     }
@@ -140,7 +139,7 @@ class AppLoginPage extends Component {
                     <Text>Copyright © 2016-, LancCJ, All Rights Reserved</Text>
                 </View>
 
-                <Modal animationduration="{0}" isopen="{this.props.status=='doing'?true:false}" position={"center"} ref='modal' style={styles.modal}/>
+                <Modal animationduration={0} isopen={this.props.status=='doing'?true:false} position="center" ref='modal' style={styles.modal}/>
             </View>
         );
     }
@@ -223,22 +222,22 @@ const _onClickThirdLogin=(shareType)=>{
 
 }
 
-//根据全局state返回当前页面所需要的信息,（注意以props的形式传递给AppLoginPage）
-function mapStateToProps(state){
-    return{
-        isLoggedIn:state.isLoggedIn,
-        status:state.status,
-    };
-}
-//返回可以操作store.state的actions,(其实就是我们可以通过actions来调用我们绑定好的一系列方法)
-function mapDispatchToProps(dispatch){
+const mapStateToProps = (state) => {
     return {
-        actions: bindActionCreators(actionCreators, dispatch)
+        isLoggedIn:state.isLoggedIn,
+        status:state.status
     };
-}
+};
 
-//链接起来
-export default  connect(mapStateToProps,mapDispatchToProps)(AppLoginPage);
+const mapDispatchToProps = (dispatch) => {
+    const loginActions = bindActionCreators(actionCreators, dispatch);
+    return {
+        loginActions
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppLoginPage);
+
 
 
 

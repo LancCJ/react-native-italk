@@ -1,8 +1,8 @@
-//登录
-export const LOGIN_ING = 'LOGIN_ING';
-export const LOGIN = 'LOGIN';
-export const LOGIN_ERROR = 'LOGIN_ERROR';
-export const LOGOUT = 'LOGOUT';
+//======登录=====
+export const LOGIN_ING = 'LOGIN_ING';//正在登录
+export const LOGIN = 'LOGIN';//已经登录
+export const LOGIN_ERROR = 'LOGIN_ERROR';//登录发生错误
+export const LOGOUT = 'LOGOUT';//登出
 
 
 

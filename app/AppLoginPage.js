@@ -1,7 +1,6 @@
 /**
  * Created by lanccj on 16/11/22.
  */
-'use strict'
 import React, { Component } from 'react';
 import {
     AppRegistry,
@@ -18,52 +17,42 @@ import { FormLabel, FormInput ,Button,SocialIcon} from 'react-native-elements'
 import {Actions} from 'react-native-router-flux'
 var Modal = require('react-native-modalbox');
 import * as QQAPI from 'react-native-qq';
+
 import {connect} from 'react-redux';//将我们的页面和action链接起来
 import {bindActionCreators} from 'redux';//将要绑定的actions和dispatch绑定到一起
-import * as actionCreators from './redux/actions/UserActions';//导入需要绑定的actions
+import * as actionCreators from './redux/actions/LoginAction';//导入需要绑定的actions
 
-import Storage from './common/Storage';
-
-
+//自定义
+import NetUtil from './common/utils/NetUtil'
+import Constant from './common/Constant'
+import StateCode from './common/StateCode'
 
 class AppLoginPage extends Component {
     constructor(props) {
         super(props);
-        this.state={
-        }
-        this.login=this.login.bind(this);
-        this.onChangeUserName=this.onChangeUserName.bind(this);
-        this.onChangePswd=this.onChangePswd.bind(this);
     }
-
-    onChangeUserName(text){
-        this.setState({'userName':text});
+    _btnOnClickLogin=()=>{
+        console.log(this.props);
+        this.props.actions.login({'userName':'lanccj','userPwd':'123456'});//dispath 登陆
+        // var params = new Map();
+        // params.set('userName','lanccj');
+        // params.set('userPwd','123456');
+        // // var headers = new Headers();
+        // // headers.append('Content-Type', 'text/plain');
+        // // headers.append('Content-Type', 'text/plain');
+        // NetUtil.post(Constant.UserLoginUrl,params,this.callbackLogin);
     }
+    callbackLogin=(response)=>{
 
-    onChangePswd(text){
-        this.setState({'userPwd':text});
-    }
-
-    login(){
-        if(!this.state.userName||!this.state.userPwd){
-            Alert.alert('用户名或密码不能为空！');
-        }else{
+        if(StateCode.SUCCESS===response.code){
+            //Alert.alert('登录成功，获取到的参数:'+response.data.token);
+            //保存信息到系统全局变量 然后保存完毕进行跳转
 
 
-
-            this.props.loginActions.login({'userName':this.state.userName,'userPwd':this.state.userPwd});//dispath 登陆
-        }
-    }
-
-    //该方法首次不会执行，如果返回false，则reduer不会执行
-    shouldComponentUpdate(nextProps,nextState){
-        const {isLoggedIn}=nextProps;
-        if(isLoggedIn){
-
-            this.setState({userName:'',userPwd:''});
             Actions.MainPage();
+        }else{
+            Alert.alert('登录失败，返回错误:'+response.message);
         }
-        return true;
     }
 
     render () {
@@ -79,21 +68,19 @@ class AppLoginPage extends Component {
                     <FormInput
                         style={[styles.textInput,{marginTop:2}]}
                         placeholder='    用户名或手机号或邮箱'
-                        //value='lanccj'
-                        onChangeText={this.onChangeUserName}
+                        value='lanccj'
                     />
                     <FormLabel>密  码:</FormLabel>
                     <FormInput
                         style={[styles.textInput,{marginTop:2}]}
                         secureTextEntry={true}
-                        //value='123456'
-                        onChangeText={this.onChangePswd}
+                        value='123456'
                     />
                     <Button
                         buttonStyle={{marginTop:5,height:40}}
                         title='登    录'
                         backgroundColor="#007AFF"
-                        onPress={this.login}
+                        onPress={this._btnOnClickLogin}
                     />
                     <Button
                         buttonStyle={{marginTop:10,height:40}}
@@ -136,10 +123,9 @@ class AppLoginPage extends Component {
                             />
                         </View>
                     </View>
-                    <Text>Copyright © 2016-, LancCJ, All Rights Reserved</Text>
+                    <Text>Copyright © 2016-, LancCJ, All Rights Reserved{this.props.status}</Text>
                 </View>
 
-                <Modal animationduration={0} isopen={this.props.status=='doing'?true:false} position="center" ref='modal' style={styles.modal}/>
             </View>
         );
     }
@@ -173,11 +159,10 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     modal: {
+        height: 300,
+        width: 300,
         justifyContent: 'center',
-        alignItems: 'center',
-        width:150,
-        height:150,
-        borderRadius:10,
+        alignItems: 'center'
     },
     text:{
 
@@ -222,22 +207,23 @@ const _onClickThirdLogin=(shareType)=>{
 
 }
 
-const mapStateToProps = (state) => {
-    return {
-        isLoggedIn:state.isLoggedIn,
-        status:state.status
+//根据全局state返回当前页面所需要的信息,（注意以props的形式传递给AppLoginPage）
+function mapStateToProps(store){
+    return{
+        isLoggedIn:store.login.isLoggedIn,
+        status:store.login.status,
     };
-};
+}
 
-const mapDispatchToProps = (dispatch) => {
-    const loginActions = bindActionCreators(actionCreators, dispatch);
+//返回可以操作store.state的actions,(其实就是我们可以通过actions来调用我们绑定好的一系列方法)
+function mapDispatchToProps(dispatch){
     return {
-        loginActions
+        actions: bindActionCreators(actionCreators, dispatch)
     };
-};
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppLoginPage);
-
+//链接起来
+export default connect(mapStateToProps,mapDispatchToProps)(AppLoginPage);
 
 
 

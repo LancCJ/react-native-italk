@@ -6,7 +6,8 @@ import {
     View,
     Image,
     TouchableOpacity,
-    Alert,StatusBar
+    Alert,
+    StatusBar
 } from 'react-native';
 
 //第三方
@@ -104,7 +105,7 @@ const scenes = Actions.create(
     </Scene>
 );
 
-export default class ITalk extends Component {
+export default class RootITalk extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>

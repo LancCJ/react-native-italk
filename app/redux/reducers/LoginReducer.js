@@ -1,3 +1,7 @@
+/**
+ * Created by lanccj on 16/12/12.
+ */
+
 import * as ActionTypes from '../actions/ActionTypes';
 
 const initialState={
@@ -7,8 +11,7 @@ const initialState={
 };
 
 //reducer处理函数更新state,渲染UI(主要根据传入旧的state,)
-export default function user(state=initialState,action={}){
-
+export default function login(state=initialState,action={}){
     switch(action.type) {
         case ActionTypes.LOGIN:
             return Object.assign({}, state, {
@@ -16,29 +19,25 @@ export default function user(state=initialState,action={}){
                 user:action.user,
                 status: 'done'
             });
-            break;
         case ActionTypes.LOGIN_ING:
+            console.log('reducer-LOGIN_ING');
             return Object.assign({}, state, {
                 isLoggedIn:false,
                 status: 'doing'
             });
-
-            break;
         case ActionTypes.LOGIN_ERROR:
             console.log('types.LOGIN_ERROR...');
-            return Object.assign({}, state, {
-                isLoggedIn: false,
-                status: null
-            });
-
+            return {
+                ...state,
+                isLoggedIn:false,
+                status: 'doing',
+            }
             break;
         case ActionTypes.LOGOUT:
             return Object.assign({}, state, {
                 isLoggedIn:false,
                 status:null
             });
-
-            break;
         //切莫忘记default返回值
         default:
             return state;

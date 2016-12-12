@@ -1,17 +1,15 @@
+import reducers from '../reducers/index';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';//引入异步操作
-import rootReducer from '../reducers/index';
+//引入所有的reducers,切记要在index.js封装下.
 const middlewares = [thunk];
-const createLogger = require('redux-logger');
 
-if (process.env.NODE_ENV === 'development') {
-    const logger = createLogger();
-    middlewares.push(logger);
-}
-const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
+const createSoreWithMiddleware=applyMiddleware(...middlewares)(createStore);
 
-export default function ConfigureStore(initialState) {
-    const store = createStoreWithMiddleware(rootReducer, initialState);
-    store.close = () => store.dispatch(END);
+//配置store信息
+export default function configureStore(initialState){
+    //创建store
+    const store=createSoreWithMiddleware(reducers,initialState);
+
     return store;
 }

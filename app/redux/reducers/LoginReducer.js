@@ -5,7 +5,7 @@
 import * as ActionTypes from '../actions/ActionTypes';
 
 const initialState={
-    isLoggedIn:true,//登陆状态
+    isLoggedIn:false,//登陆状态
     user:{},//用户登录信息
     status: null//登陆操作状态 ‘done’:已登陆,'doing':正在登陆，null：没有登陆
 };
@@ -14,6 +14,7 @@ const initialState={
 export default function login(state=initialState,action={}){
     switch(action.type) {
         case ActionTypes.LOGIN:
+            console.log('reducer-LOGIN');
             return Object.assign({}, state, {
                 isLoggedIn:true,
                 user:action.user,

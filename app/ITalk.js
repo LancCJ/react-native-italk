@@ -21,7 +21,7 @@ import MainPage     from './MainPage';
 import RegisterPage from './RegisterPage';
 import ChatingRoom  from './chat/ChatingRoom';
 import CommonSettingPage  from './setting/common/CommonSettingPage';
-
+import Contacts    from './friend/Contacts';//通讯录
 
 const styles = StyleSheet.create({
     navigationBarStyle:{
@@ -69,7 +69,6 @@ const scenes = Actions.create(
             titleStyle={styles.titleStyle}
         />
         <Scene
-
             key="MainPage"
             renderBackButton={_renderBackButton}
             component={MainPage}
@@ -98,6 +97,14 @@ const scenes = Actions.create(
             renderBackButton={_renderBackButton}
             component={CommonSettingPage}
             title="通用设置"
+            navigationBarStyle={styles.navigationBarStyle}
+            titleStyle={styles.titleStyle}
+        />
+        <Scene
+            key="Contacts"
+            renderBackButton={_renderBackButton}
+            component={Contacts}
+            title="通讯录"
             navigationBarStyle={styles.navigationBarStyle}
             titleStyle={styles.titleStyle}
         />

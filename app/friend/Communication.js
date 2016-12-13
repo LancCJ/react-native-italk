@@ -11,21 +11,26 @@ import {
 
 //第三方组件
 import { List, ListItem } from 'react-native-elements'
+import {Actions} from 'react-native-router-flux'
+
 
 const list = [
     {
+        id:'contacts',
         title: '通讯录',
         icon: 'phone-square',
         color:'#FFA102',
         type:'font-awesome'
     },
     {
+        id:'groups',
         title: '群组',
         icon: 'users',
         color:'#1A7FEE',
         type:'font-awesome'
     },
     {
+        id:'subscribes',
         title: '订阅号',
         icon: 'check-square',
         color:'#00B0FF',
@@ -47,7 +52,7 @@ export default class Communication extends Component {
                             key={i}
                             title={item.title}
                             leftIcon={{name: item.icon,color:item.color,type:item.type}}
-                            onPress={_onPress}
+                            onPress={()=>_onPress(item.id)}
                         />
                     ))
                 }
@@ -56,9 +61,15 @@ export default class Communication extends Component {
     }
 }
 
-const _onPress=()=>{
-    Alert.alert('你点击了');
-}
+const _onPress = (id) => {
+    if(id==='contacts'){
+        Actions.
+    }else if(id==='groups'){
+
+    }else if(id==='subscribes'){
+
+    }
+};
 
 const styles = StyleSheet.create({
 

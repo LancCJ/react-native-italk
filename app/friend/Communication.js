@@ -63,7 +63,6 @@ export default class Communication extends Component {
 
 const _onPress = (id) => {
     if(id==='contacts'){
-        Actions.
     }else if(id==='groups'){
 
     }else if(id==='subscribes'){

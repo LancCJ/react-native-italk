@@ -21,7 +21,6 @@ import {connect} from 'react-redux';//将我们的页面和action链接起来
 import {bindActionCreators} from 'redux';//将要绑定的actions和dispatch绑定到一起
 import * as actionCreators from './redux/actions/LoginAction';//导入需要绑定的actions
 
-
 class AppLoginPage extends Component {
     constructor(props) {
         super(props);
@@ -53,10 +52,26 @@ class AppLoginPage extends Component {
 
     //该方法首次不会执行，如果返回false，则reduer不会执行
     shouldComponentUpdate(nextProps,nextState){
-        const {isLoggedIn}=nextProps;
+
+        const {isLoggedIn,user,status}=nextProps;
+
         if(isLoggedIn){
-            console.log('登录成功进行跳转')
+            //console.log('登录成功进行跳转')
             this.setState({userName:'',userPwd:''});
+
+            // 使用key来保存数据。这些数据一般是全局独有的，常常需要调用的。
+            // 除非你手动移除，这些数据会被永久保存，而且默认不会过期。
+            storage.save({
+                key: 'user',  // 注意:请不要在key中使用_下划线符号!
+                rawData: {
+                    user: user
+                },
+
+                // 如果不指定过期时间，则会使用defaultExpires参数
+                // 如果设为null，则永不过期
+                expires: 1000 * 3600
+            });
+
             Actions.MainPage();
         }
         return true;
@@ -102,7 +117,7 @@ class AppLoginPage extends Component {
                             <Text style={[{marginLeft:5}]}>登录有问题?</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={_loginUsePhone}>
-                            <Text>{this.props.status}短信验证登录</Text>
+                            <Text>短信验证登录</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -222,6 +237,7 @@ const _onClickThirdLogin=(shareType)=>{
 function mapStateToProps(store){
     return{
         isLoggedIn:store.login.isLoggedIn,
+        user:store.login.user,
         status:store.login.status,
     };
 }

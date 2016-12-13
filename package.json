@@ -17,6 +17,7 @@
     "react-native-qq": "^2.0.4",
     "react-native-router-flux": "^3.37.0",
     "react-native-share": "^1.0.17",
+    "react-native-storage": "^0.1.4",
     "react-native-tab-navigator": "^0.3.3",
     "react-native-vector-icons": "^3.0.0",
     "react-redux": "^4.4.6",

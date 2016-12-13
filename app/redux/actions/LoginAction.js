@@ -13,7 +13,7 @@ import * as ActionTypes from '../actions/ActionTypes';
  *登录
  */
 export function login(user){
-    console.log('action-LOGIN_ING');
+    console.log('action-用户登录中');
     return (dispatch)=>{
         dispatch({'type':ActionTypes.LOGIN_ING});
 
@@ -29,7 +29,8 @@ export function login(user){
             .then((response) => response.json())
             .then((responseJSON) => {
                 if(StateCode.SUCCESS===responseJSON.code){
-                    console.log('action-LOGIN'+responseJSON.data);
+                    console.log('action-用户已经登录');
+                    console.log('登录返回数据');
                     console.log(responseJSON.data);
                     dispatch({type:ActionTypes.LOGIN,user:responseJSON.data});
                 }else{

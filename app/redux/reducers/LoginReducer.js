@@ -14,14 +14,14 @@ const initialState={
 export default function login(state=initialState,action={}){
     switch(action.type) {
         case ActionTypes.LOGIN:
-            console.log('reducer-LOGIN');
+            console.log('reducer-用户已经登录');
             return Object.assign({}, state, {
                 isLoggedIn:true,
                 user:action.user,
                 status: 'done'
             });
         case ActionTypes.LOGIN_ING:
-            console.log('reducer-LOGIN_ING');
+            console.log('reducer-用户登录中');
             return Object.assign({}, state, {
                 isLoggedIn:false,
                 status: 'doing'
